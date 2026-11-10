@@ -24,7 +24,18 @@
 另外需要:
 
 1. [uv](https://docs.astral.sh/uv/)(會自己裝 Python 和套件)
-2. fal.ai 的 API key → 設成環境變數 `FAL_KEY`(設完重開 Claude)
+2. fal.ai 的 API 金鑰,設成環境變數 `FAL_KEY`(**不要貼進對話**):
+   - 到 [fal.ai](https://fal.ai) 註冊 → Settings → **API Keys** → **Add key**,複製金鑰
+   - **Windows**:開 PowerShell,貼這一行(引號裡換成你的金鑰),按 Enter
+     ```powershell
+     setx FAL_KEY "貼你的金鑰"
+     ```
+     也可以用點的:設定 → 系統 → 進階系統設定 → 環境變數 → 新增,名稱 `FAL_KEY`
+   - **Mac / Linux**:終端機貼這一行,再重開終端機
+     ```bash
+     echo 'export FAL_KEY="貼你的金鑰"' >> ~/.zshrc
+     ```
+   - 設完**重開 Claude Desktop / Claude Code** 才讀得到
 
 ## 用法
 
@@ -57,7 +68,7 @@ uv run skills/make-it-dance/scripts/dance.py cost --out work
 
 - 舞蹈影片請用自己拍的或有授權的;成品只留動作,沒有聲音(音樂上片時在平台裡加)
 - 場景要畫在角色圖裡:成品的背景就是角色圖的背景
-- 寫實風的小孩 / 真人臉容易被 fal 內容審查擋下,預設用 3D 卡通風
+- 預設 3D 卡通風;要做寫實風的真人(尤其小孩),先看 fal 的內容規範,被擋的那次一樣計費
 
 ## License
 
