@@ -1,0 +1,11 @@
+{
+  "name": "make-it-dance",
+  "owner": { "name": "衝浪阿北" },
+  "plugins": [
+    {
+      "name": "make-it-dance",
+      "source": "./",
+      "description": "一張角色圖 + 一支人跳舞的影片 → 讓你的角色跳同一支舞(fal.ai wan-motion 動作轉移)"
+    }
+  ]
+}

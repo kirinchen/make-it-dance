@@ -1,0 +1,10 @@
+{
+  "name": "make-it-dance",
+  "version": "1.0.0",
+  "description": "一張角色圖 + 一支人跳舞的影片 → 讓你的角色跳同一支舞(fal.ai wan-motion 動作轉移,按次付費)",
+  "author": { "name": "衝浪阿北" },
+  "homepage": "https://github.com/kirinchen/make-it-dance",
+  "repository": "https://github.com/kirinchen/make-it-dance",
+  "license": "MIT",
+  "keywords": ["dance", "motion-transfer", "fal", "video"]
+}

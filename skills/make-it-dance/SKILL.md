@@ -22,7 +22,7 @@ description: 一張角色圖 + 一支人跳舞的影片 → 讓你的角色(寵�
 
 ## 流程(照順序,每一步先 dry-run)
 
-`scripts/dance.py` 預設 **dry-run**:只印計畫跟預估金額,不花錢。使用者確認後才加 `--live`。
+`scripts/dance.py` 在**這個 skill 的資料夾**底下(載入 skill 時給的 base directory);下面指令裡的 `scripts/dance.py` 要換成完整路徑。它預設 **dry-run**:只印計畫跟預估金額,不花錢。使用者確認後才加 `--live`。
 
 ### 1. 角色圖 —— 在便宜的這層定案
 

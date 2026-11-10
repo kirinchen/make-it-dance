@@ -9,11 +9,17 @@
 
 ## 安裝
 
-```bash
-git clone https://github.com/kirinchen/make-it-dance ~/.claude/skills/make-it-dance
+最簡單:在 Claude Desktop(Code 分頁)或 Claude Code 直接跟它說
+
+> 幫我安裝這個 plugin:https://github.com/kirinchen/make-it-dance
+
+自己下指令也可以:
+
+```
+/plugin install make-it-dance --marketplace kirinchen/make-it-dance
 ```
 
-Windows:clone 到 `%USERPROFILE%\.claude\skills\make-it-dance`。
+(舊版 Claude Code:先 `/plugin marketplace add kirinchen/make-it-dance`,再 `/plugin install make-it-dance@make-it-dance`)
 
 另外需要:
 
@@ -26,16 +32,16 @@ Windows:clone 到 `%USERPROFILE%\.claude\skills\make-it-dance`。
 
 > 用 make-it-dance 這個 skill 幫我做一支跳舞影片:主角是一個胖嘟嘟的三歲小孩,穿黑色連帽衫和白球鞋,跳這個資料夾裡 dance.mp4 的前 16 秒。先給我看角色圖,我說 OK 再生影片,最後告訴我總共花多少錢。
 
-Claude 會照 [SKILL.md](SKILL.md) 的流程:生角色圖 → 給你看 → 動作轉移 → 回報花費。
+Claude 會照 [SKILL.md](skills/make-it-dance/SKILL.md) 的流程:生角色圖 → 給你看 → 動作轉移 → 回報花費。
 每一步都先試算金額,你確認才真的花錢。
 
 也可以自己跑腳本:
 
 ```bash
-uv run scripts/dance.py character --describe "a chubby 3-year-old toddler in a black hoodie" --out work --live
-uv run scripts/dance.py dance --character work/character.png --drive dance.mp4 --start 0 --dur 16 \
+uv run skills/make-it-dance/scripts/dance.py character --describe "a chubby 3-year-old toddler in a black hoodie" --out work --live
+uv run skills/make-it-dance/scripts/dance.py dance --character work/character.png --drive dance.mp4 --start 0 --dur 16 \
   --prompt "a chubby cartoon toddler in a black hoodie, 3D animated style. No other people, no text" --out work --live
-uv run scripts/dance.py cost --out work
+uv run skills/make-it-dance/scripts/dance.py cost --out work
 ```
 
 不加 `--live` 就只是試算,不花錢。
